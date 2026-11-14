@@ -1,0 +1,75 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "almond",
+  "name": "Elbify",
+  "colors": {
+    "primary": "#096198",
+    "light": "#147276",
+    "dark": "#144180"
+  },
+  "favicon": {
+    "light": "/images/ElbifyWEBP.webp",
+    "dark": "/images/ElbifyWEBP.webp"
+  },
+  "navigation": {
+    "pages": [
+      "home",
+      {
+        "group": "BULLETIN",
+        "pages": [
+          "pages/bulletin/whats-new",
+          "pages/bulletin/admin-panel"
+        ]
+      },
+      {
+        "group": "PLUGINS",
+        "pages": [
+          "pages/plugins/moderation",
+          "pages/plugins/player-reports",
+          "pages/plugins/appeals"
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "/images/ElbifyWEBP.webp",
+    "dark": "/images/ElbifyWEBP.webp",
+    "href": "https://elbify.xyz/"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "https://discord.gg/tTyTTW3Dta"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Dashboard",
+      "href": "https://app.mintlify.com"
+    }
+  },
+  "footer": {
+    "socials": {
+      "discord": "https://discord.com/users/1301032765600563240"
+    }
+  },
+  "appearance": {
+    "default": "dark",
+    "strict": true
+  },
+  "metadata": {
+    "timestamp": true
+  },
+  "styling": {
+    "codeblocks": "dark"
+  },
+  "search": {
+    "prompt": "Search..."
+  },
+  "description": "The official documentation for Elbify - a free-to-use, simple and powerful bot designed to enhance your Emergency Hamburg private roleplay experience.",
+  "contextual": {
+    "options": [],
+    "display": "header"
+  }
+}
