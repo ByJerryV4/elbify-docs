@@ -15,18 +15,34 @@
     "pages": [
       "home",
       {
-        "group": "BULLETIN",
+        "group": "Bulletin",
         "pages": [
           "pages/bulletin/whats-new",
           "pages/bulletin/admin-panel"
         ]
       },
       {
-        "group": "PLUGINS",
+        "group": "Plugins",
         "pages": [
           "pages/plugins/moderation",
           "pages/plugins/player-reports",
-          "pages/plugins/appeals"
+          "pages/plugins/appeals",
+          "pages/plugins/session-management",
+          "pages/plugins/admin-callouts",
+          "pages/plugins/shifts",
+          "pages/plugins/tasks",
+          "pages/plugins/leave-of-absence",
+          "pages/plugins/vehicle-registration",
+          "pages/plugins/verification"
+        ]
+      },
+      {
+        "group": "Dashboard",
+        "pages": [
+          "pages/dashboard/permissions",
+          "pages/dashboard/commands",
+          "pages/dashboard/audit-logs",
+          "pages/dashboard/forms"
         ]
       }
     ]

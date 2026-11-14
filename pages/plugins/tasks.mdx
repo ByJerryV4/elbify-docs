@@ -1,0 +1,49 @@
+---
+title: "Tasks"
+description: "An overview of the Tasks plugin - randomly assign duty tasks to the staff who are on shift."
+---
+
+<Info>
+  Before reading, please toggle the "Tasks" plugin **on** in the **Plugins** menu on the dashboard.
+
+  **Tasks are assigned to staff who are on shift, so the "Shifts" plugin should also be enabled for this plugin to work as intended.**
+</Info>
+
+## How Tasks Work
+
+When a task is assigned, Elbify picks one of your task types at random and gives it to the staff member. A new task replaces the one they had before.
+
+Tasks are assigned in two ways, both of which can be controlled in the settings:
+
+- Automatically when a staff member starts a shift.
+- On a repeating interval, for every staff member currently on shift.
+
+If an announcement channel is set, the task is posted there and the staff member is pinged.
+
+{/* IMAGE: /images/taskannouncementexample.png - screenshot of a task announcement in the announcement channel */}
+
+Staff with the **Task Management** permission can see the active tasks of your staff team in the **Tasks** tab on the admin panel.
+
+## Configuring the Plugin
+
+The task settings are found on the **Tasks** page of the dashboard, which requires the **Task Management** permission.
+
+**Announcement Channel** <br />The channel task assignments are posted to.
+
+**Reassignment Interval in Minutes** <br />How often staff on shift are given a new task. Leave this blank to only assign tasks when a shift starts.
+
+**Embed Colour** <br />The colour of the task announcement.
+
+**Assign a task automatically when a shift starts** <br />Gives staff a task as soon as they start a shift.
+
+{/* IMAGE: /images/tasksettings.png - screenshot of the Tasks page on the dashboard */}
+
+### Task Types
+
+Task types are the duties that can be assigned. A server can have up to **5** task types by default.
+
+**Name** <br />The name of the task, up to 30 characters.
+
+**Description** <br />An optional description of what the task involves, up to 200 characters. It is shown in the announcement.
+
+{/* IMAGE: /images/tasktypeexample.png - screenshot of the Add Task Type window */}

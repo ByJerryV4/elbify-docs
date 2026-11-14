@@ -1,0 +1,72 @@
+---
+title: "Verification"
+description: "An overview of the Verification plugin - verify members with their linked Roblox account to give them roles and sync their nickname."
+---
+
+<Info>
+  Before reading, please toggle the "Verification" plugin **on** in the **Plugins** menu on the dashboard.
+
+  **A Verified role must be set on the dashboard, and Elbify's role must sit above it in your server's role list, in order for this plugin to work as intended.**
+</Info>
+
+## Verifying Members
+
+Members can verify themselves with the **Verify** button on the verification panel, or with `/verify me`. If they have already linked their Roblox account on Elbify they are verified instantly, otherwise they are asked to link it first.
+
+Once verified, a member is given the Verified role and their nickname is updated using the nickname template.
+
+{/* IMAGE: /images/verifypanelexample.png - screenshot of the verification panel with the Verify button */}
+
+## Managing Verification
+
+These commands require the **Server Management** permission.
+
+**/verify panel** <br />Posts the verification panel in the current channel.
+
+**/verify user** <br />Verifies a member who has linked their Roblox account.
+
+**/verify remove** <br />Removes a member's verification.
+
+**/verify sync** <br />Re-checks every verified member's roles and group binds. This runs in the background and you will be told when it finishes.
+
+## Configuring the Plugin
+
+The verification settings are found on the **Verification Settings** page of the dashboard.
+
+**Verified Role** <br />Given to members once they verify.
+
+**Unverified Role** <br />Optional. Given to new members when they join and removed when they verify.
+
+**Nickname Template** <br />Sets members' nicknames when they verify. You can use `{roblox_username}`, `{roblox_id}` and `{discord_username}`. Leave it blank to keep nicknames unchanged.
+
+{/* IMAGE: /images/verificationsettings.png - screenshot of the Verification Settings page on the dashboard */}
+
+<Info>
+  Discord caps nicknames at 32 characters, and nobody's nickname can be changed if their top role is above Elbify's.
+</Info>
+
+### Group Role Binds
+
+Group role binds give a Discord role based on a member's rank in a Roblox group. Rank 0 is a guest and 255 is the group owner. You can add up to **25** binds.
+
+**Group ID** <br />The ID of the Roblox group.
+
+**Mode** <br />Either **Rank and above** or **Exactly rank**.
+
+**Rank** <br />The group rank to match.
+
+**Role** <br />The Discord role given to members who match.
+
+Roles are added and removed when a member verifies or when `/verify sync` is run. If Roblox can't be reached, no group roles are changed.
+
+### Auto-kick
+
+Auto-kick removes members who haven't verified after a set amount of time, from 1 day to 365 days.
+
+The timer starts when a member joins, or when you turn auto-kick on, whichever is later, so enabling it never kicks existing members immediately. Bots, the server owner, administrators and members with an **exempt role** are never kicked. You can add up to **10** exempt roles.
+
+<Warning>
+  **Important**
+
+  Auto-kick needs a Verified role set, and Elbify needs the **Kick Members** permission with a role above the members it removes.
+</Warning>

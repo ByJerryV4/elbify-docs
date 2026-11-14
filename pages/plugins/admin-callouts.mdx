@@ -1,0 +1,42 @@
+---
+title: "Admin Callouts"
+description: "An overview of the Admin Callouts plugin - a quick way for your community to call for staff assistance in your ingame server."
+---
+
+<Info>
+  Before reading, please toggle the "Admin Callouts" plugin **on** in the **Plugins** menu on the dashboard.
+
+  **A callout channel and a callout ping role must be set on the dashboard in order for this plugin to work as intended.**
+</Info>
+
+## Calling an Admin
+
+Anyone in the server can call for staff assistance with the `/call-admin` command.
+
+{/* IMAGE: /images/calladmincmdexample.png - screenshot of the /call-admin command with the reason and location options visible */}
+
+**reason** <br />Why you need an admin. This is optional.
+
+**location** <br />Where you need help. This is optional, but heavily encouraged.
+
+---
+
+Once the command is sent, the callout is posted in the callout channel and the callout ping role is pinged. You can only call for an admin once every **2 minutes**.
+
+{/* IMAGE: /images/admincalloutexample.png - screenshot of a callout posted in the callout channel, with the Resolve and Dismiss buttons */}
+
+## Handling Callouts
+
+Staff with the **Moderation Usage** permission can resolve or dismiss a callout with the buttons on the callout message. Dismissing a callout asks for a reason. Callouts can also be handled from the **Callouts** tab on the admin panel.
+
+To see every open callout at once, staff with the mod role can use `/admincall list`.
+
+## Configuring the Plugin
+
+The callout settings are found on the **Admin Callouts** page of the dashboard, which requires the **Moderation Management** permission.
+
+**Callout Channel** <br />The channel callouts are posted to.
+
+**Callout Ping Role** <br />The role pinged when a new callout is created.
+
+{/* IMAGE: /images/admincalloutsettings.png - screenshot of the Admin Callouts page on the dashboard */}

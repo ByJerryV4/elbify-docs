@@ -1,0 +1,38 @@
+---
+title: "Vehicle Registration"
+description: "An overview of the Vehicle Registration plugin - let players register their vehicles for staff to look up."
+---
+
+<Info>
+  Before reading, please toggle the "Vehicle Registration" plugin **on** in the **Plugins** menu on the dashboard.
+
+  **Players must link their Roblox account on the Elbify website before they can register a vehicle.**
+</Info>
+
+## Registering a Vehicle
+
+Players register a vehicle with the `/vehicle register` command. Choose a vehicle category and the vehicle, then fill in its details.
+
+{/* IMAGE: /images/vehicleregisterexample.png - screenshot of the vehicle category and vehicle picker after running /vehicle register */}
+
+Each player can only register a limited number of vehicles on a server. To change a registration, use `/vehicle edit`.
+
+## Viewing Vehicles
+
+**list** <br />`/vehicle list` shows your own registered vehicles. Staff with the **Vehicle Search** permission can also pick another player to see theirs.
+
+**search** <br />`/vehicle search` finds a vehicle by its license plate. This requires the **Vehicle Search** permission and a linked Roblox account.
+
+{/* IMAGE: /images/vehiclesearchexample.png - screenshot of a /vehicle search result */}
+
+## Configuring the Plugin
+
+The vehicle settings are found on the **Vehicle Registration Settings** page of the dashboard, which requires the **Vehicle Registration Management** permission.
+
+**Registration Log Channel** <br />Optional. New registrations and edits are logged to this channel. Leave it blank to disable logging.
+
+**Max Registrations Per Player** <br />How many vehicles one player can have registered at once, from 1 to 10.
+
+{/* IMAGE: /images/vehiclesettings.png - screenshot of the Vehicle Registration Settings page on the dashboard */}
+
+Access to `/vehicle search` is controlled by the **Vehicle Search** permission on the **Permissions** page. Assign it to whichever roles should be able to look up license plates.

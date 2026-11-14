@@ -1,0 +1,58 @@
+---
+title: "Leave of Absence"
+description: "An overview of the Leave of Absences plugin - let your staff request scheduled leave, reviewed by management."
+---
+
+<Info>
+  Before reading, please toggle the "Leave of Absences" plugin **on** in the **Plugins** menu on the dashboard.
+</Info>
+
+## Requesting Leave
+
+Staff with the **Leave of Absence Usage** permission can request leave with the `/leave request` command.
+
+{/* IMAGE: /images/leaverequestexample.png - screenshot of the /leave request command with the start, end and reason options visible */}
+
+**start** <br />When your leave begins, in the format `YYYY-MM-DD HH:mm`. This must be in the future.
+
+**end** <br />When your leave ends, in the same format. This must be after the start.
+
+**reason** <br />The reason for your leave. This is optional.
+
+<Warning>
+  **Important**
+
+  All dates and times are in **UTC**.
+</Warning>
+
+---
+
+Once the parameters have been filled out, send the command and confirm your request. It is then sent to management for review, and you will be messaged when it is accepted or denied.
+
+You can check your own requests with `/leave manage`, which also lets you cancel a request that is still pending. To see who is currently on leave, use `/leave active`.
+
+## Reviewing Requests
+
+Staff with the **Leave of Absence Management** permission can review pending requests with `/leave adminmanage`, from the approvals channel, or from the **Leave of Absence Settings** page on the dashboard.
+
+**Accept** <br />Approves the request as submitted.
+
+**Modify & Accept** <br />Approves the request with different start and end dates.
+
+**Deny** <br />Denies the request. You can optionally give a reason.
+
+{/* IMAGE: /images/leavereviewexample.png - screenshot of a leave request in the approvals channel with the Accept, Modify & Accept and Deny buttons */}
+
+## Configuring the Plugin
+
+The leave settings are found on the **Leave of Absence Settings** page of the dashboard.
+
+**Approvals Channel** <br />The channel new leave requests are sent to for review.
+
+**Leave Logs Channel** <br />The channel the outcome of each request is logged to.
+
+**Ping Role for New Requests** <br />The role pinged when a new request is sent to the approvals channel.
+
+{/* IMAGE: /images/leavesettings.png - screenshot of the Leave of Absence Settings page on the dashboard */}
+
+If the "Shifts" plugin is enabled, accepted leave can also excuse staff from the weekly shift requirement. See the Shifts page for more information.
