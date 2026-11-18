@@ -39,10 +39,12 @@
       {
         "group": "Dashboard",
         "pages": [
+          "pages/dashboard/plugins",
           "pages/dashboard/permissions",
           "pages/dashboard/commands",
           "pages/dashboard/audit-logs",
-          "pages/dashboard/forms"
+          "pages/dashboard/forms",
+          "pages/dashboard/import-data"
         ]
       }
     ]

@@ -4,16 +4,16 @@ description: "An overview of the moderation plugin - a simple way to track any a
 ---
 
 <Info>
-  Before logging moderations, please toggle the "Moderation" plugin **on** in the **Configuration** menu on the dashboard.
+  Before logging moderations, please toggle the "Moderation" plugin **on** in the **Plugins** menu on the dashboard.
 </Info>
 
 ## Logging Moderations
 
 Logging / creating moderations is very simple. There are **two** ways to log moderations; the dashboard admin panel or with the `/moderate` command.
 
-![](/images/moderatecmdexample.png)
+![The /moderate command with the player, type and reason options](/images/moderatecmdexample.png)
 
-**user** <br />The Roblox username or User ID of the player you are moderating.
+**player** <br />The Roblox username of the player you are moderating. Select them from the list that appears as you type.
 
 **type** <br />The punishment type, either from the defaults or customised options in the dashboard.
 
@@ -21,10 +21,48 @@ Logging / creating moderations is very simple. There are **two** ways to log mod
 
 ---
 
-On the **admin panel**, if the correct \[permission keys\](INSERT LINK) are set, your server staff will be able to log moderations directly.<br /><br />To do this, you should **enter the username or User ID of the player** and select the correct player from the dropdown menu. Add the reason and select the punishment type, then click `Log Moderation`.
+On the **admin panel**, if the **Moderation Usage** permission is set on the [**Permissions**](/pages/dashboard/permissions) page of the dashboard, your server staff will be able to log moderations directly.<br /><br />To do this, you should **enter the username of the player** and select the correct player from the dropdown menu. Add the reason and select the punishment type, then click `Log Moderation`.
 
 ---
 
-Once the parameters have been filled out, simply send the command. If the plugin is enabled, you will be asked to confirm or cancel the moderation. Check the information is correct and confirm it; the moderation will be logged and visible with the `/moderations` command or on the admin panel.
+Once the parameters have been filled out, simply send the command. If the plugin is enabled, you will be asked to confirm or cancel the moderation. Check the information is correct and confirm it; the moderation will be logged as a numbered case and visible on the admin panel. If a moderation log channel is set, the case is also posted there.
 
-To learn how to **edit a moderation** or **delete a moderation**, use the Editing a Moderation _(insert link to guide here)_ guide.
+Only the moderator who ran the command can confirm it, and the confirmation expires after **5 minutes**.
+
+---
+
+## Viewing and Editing Moderations
+
+**/moderations** <br />Lists recent moderations, 10 per page. Filter by player or moderator, and open one for its details.
+
+**/moderation-info** <br />Shows one moderation by its case number, including its staff note.
+
+**/edit-moderation** <br />Changes the type, reason or staff note of a moderation, or deletes it.
+
+Staff with **Moderation Usage** can view every moderation, but only edit or delete the ones they logged. Staff with **Manage Moderations** can edit and delete any moderation. Moderations can also be viewed and edited from the **Moderation** tab on the admin panel.
+
+Each of these commands can be switched off on the [**Commands**](/pages/dashboard/commands) page.
+
+---
+
+## Configuring the Plugin
+
+The moderation settings are found on the **Moderation** page of the dashboard, which requires the **Server Management** permission.
+
+![The Moderation settings page with a log channel, four moderation types, player notifications and the commands reference](/images/moderationsettings.png)
+
+**Mod Log Channel** <br />The channel confirmed moderations are posted to.
+
+**Moderation Types** <br />The punishment types that can be chosen when logging a moderation. You can add up to **5** types, or **25** with Elbify Plus. These are also the types you can allow players to appeal in the [Forms](/pages/dashboard/forms) settings.
+
+### Player Notifications
+
+Elbify can tell players when a moderation is logged against their linked Roblox account. Staff notes are never included.
+
+**Send a direct message** <br />DMs the player if they're verified and still in your server.
+
+**Public notice channel** <br />Optional. Posts a notice that mentions the player in this channel. Leave it empty to disable.
+
+## Importing From Another Bot
+
+If you used Trident before, you can bring its moderation logs over with the [**Import Data**](/pages/dashboard/import-data) page.

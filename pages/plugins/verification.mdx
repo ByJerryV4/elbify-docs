@@ -11,7 +11,7 @@ description: "An overview of the Verification plugin - verify members with their
 
 ## Verifying Members
 
-Members can verify themselves with the **Verify** button on the verification panel, or with `/verify me`. If they have already linked their Roblox account on Elbify they are verified instantly, otherwise they are asked to link it first.
+Members can verify themselves with the **Verify** button on the verification panel, or with `/verify`. If they have already linked their Roblox account on Elbify they are verified instantly, otherwise they are asked to link it first.
 
 Once verified, a member is given the Verified role and their nickname is updated using the nickname template.
 
@@ -21,13 +21,17 @@ Once verified, a member is given the Verified role and their nickname is updated
 
 These commands require the **Server Management** permission.
 
-**/verify panel** <br />Posts the verification panel in the current channel.
+**/verify member:** <br />Verifies someone else who has linked their Roblox account. This is the same `/verify` command with the `member` option filled in.
 
-**/verify user** <br />Verifies a member who has linked their Roblox account.
+**/verification panel** <br />Posts the verification panel in the current channel.
 
-**/verify remove** <br />Removes a member's verification.
+**/verification remove** <br />Removes a member's verification.
 
-**/verify sync** <br />Re-checks every verified member's roles and group binds. This runs in the background and you will be told when it finishes.
+**/verification sync** <br />Re-checks every verified member's roles and group binds. This runs in the background and you will be told when it finishes.
+
+**/update** <br />Updates a member's verification roles and nickname.
+
+Each of these can be switched off on the [**Commands**](/pages/dashboard/commands) page. `/verify` and `/verify member:` have separate switches, so you can let members verify themselves while turning off verifying others.
 
 ## Configuring the Plugin
 
@@ -37,9 +41,11 @@ The verification settings are found on the **Verification Settings** page of the
 
 **Unverified Role** <br />Optional. Given to new members when they join and removed when they verify.
 
-**Nickname Template** <br />Sets members' nicknames when they verify. You can use `{roblox_username}`, `{roblox_id}` and `{discord_username}`. Leave it blank to keep nicknames unchanged.
+**Verification Logs Channel** <br />Optional. Verifications, removed verifications and Roblox account changes are logged here. Leave it blank to disable logging.
 
-{/* IMAGE: /images/verificationsettings.png - screenshot of the Verification Settings page on the dashboard */}
+**Nickname Template** <br />Sets members' nicknames when they verify. You can use `{roblox_username}`, `{roblox_displayname}`, `{roblox_id}` and `{discord_username}`. Leave it blank to keep nicknames unchanged.
+
+![The Verification Settings page with roles, a log channel, a nickname template, two group role binds and auto-kick turned on](/images/verificationsettings.png)
 
 <Info>
   Discord caps nicknames at 32 characters, and nobody's nickname can be changed if their top role is above Elbify's.
@@ -57,13 +63,13 @@ Group role binds give a Discord role based on a member's rank in a Roblox group.
 
 **Role** <br />The Discord role given to members who match.
 
-Roles are added and removed when a member verifies or when `/verify sync` is run. If Roblox can't be reached, no group roles are changed.
+Roles are added and removed when a member verifies or when `/verification sync` is run. If Roblox can't be reached, no group roles are changed.
 
 ### Auto-kick
 
 Auto-kick removes members who haven't verified after a set amount of time, from 1 day to 365 days.
 
-The timer starts when a member joins, or when you turn auto-kick on, whichever is later, so enabling it never kicks existing members immediately. Bots, the server owner, administrators and members with an **exempt role** are never kicked. You can add up to **10** exempt roles.
+The timer starts when a member joins, or when you turn auto-kick on, whichever is later, so enabling it never kicks existing members immediately. Bots, the server owner, administrators and members with an **exempt role** are never kicked. You can add up to **10** exempt roles. At most **25** members are kicked per hour.
 
 <Warning>
   **Important**

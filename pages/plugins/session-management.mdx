@@ -4,7 +4,57 @@ description: "An overview of the Session Management plugin - control server sess
 ---
 
 <Info>
-  Before reading, please toggle the "Session Management" plugin **on** in the **Plugins** menu on the dashboard.
+  Before reading, please toggle the "Sessions" plugin **on** in the **Plugins** menu on the dashboard.
+</Info>
+
+## Announcing a Session
+
+Staff with the **Session Management** permission can announce a session with the `/session` command.
+
+{/* IMAGE: /images/sessioncmdexample.png - screenshot of the /session command showing the ssu, lpc and ssd subcommands */}
+
+**ssu** <br />Announces that a session has started.
+
+**lpc** <br />Announces a low player count.
+
+**ssd** <br />Announces that the session has ended.
+
+---
+
+The announcement is sent to the channel set for that type on the dashboard, showing who the host is, the time, and the join code if one is set. If a join link is set, a **Join Session** button is added.
+
+{/* IMAGE: /images/sessionannouncementexample.png - screenshot of a session start announcement in the announcements channel */}
+
+<Info>
+  If no channel has been set for an announcement type, the command will tell you to set one in the dashboard.
 </Info>
 
 ## Configuring the Plugin
+
+The session settings are found on the **Session Management** page of the dashboard.
+
+**Join Code** <br />Up to 8 characters. You can get this from your ingame server's Access Settings.
+
+**Join Link** <br />The link used to join the server directly. You can also get this from your ingame server's Access Settings.
+
+![The Session Management page with the join code, join link and announcement tabs](/images/sessionsettings.png)
+
+### Announcement Types
+
+**Session Start**, **Low Player Count** and **Session Shutdown** are each configured separately. Select one to edit it; a preview of the announcement is shown as you make changes.
+
+**Channel** <br />The channel the announcement is sent to.
+
+**Embed Colour** <br />The accent colour of the announcement.
+
+**Embed Title** <br />The title of the announcement, up to 200 characters.
+
+**Description** <br />The body of the announcement, up to 3500 characters.
+
+**Embed Image URL** <br />An optional image shown in the announcement.
+
+**Role Pings** <br />Optionally ping a role when the announcement is sent. You can also choose to ping the mod role.
+
+![The Session Start announcement editor next to its live Discord preview](/images/sessionpanelexample.png)
+
+To set the same channel or ping role on all three announcement types at once, use the **Apply To All** options at the top of the page.
