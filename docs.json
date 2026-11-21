@@ -50,7 +50,8 @@
           "pages/dashboard/commands",
           "pages/dashboard/audit-logs",
           "pages/dashboard/forms",
-          "pages/dashboard/import-data"
+          "pages/dashboard/import-data",
+          "pages/dashboard/departments"
         ]
       }
     ]

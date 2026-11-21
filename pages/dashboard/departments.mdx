@@ -1,0 +1,230 @@
+---
+title: "Departments"
+description: "This page covers Departments - set up police, fire, medic and other departments for your server, each with its own roster, ranks and member portal."
+---
+
+**Departments** let you run the services in your roleplay server, such as a police force or a fire brigade, on the Elbify website. Each department has its own roster, ranks and member portal, where members read announcements and leaders manage the chain of command. Server admins create departments on the dashboard, and each department is run by its owner.
+
+<Info>
+  Creating, deleting and transferring departments requires you to be an **Admin** on the dashboard. Department owners can manage their own department without being a server admin.
+</Info>
+
+## The Departments Page
+
+The **Departments** page is found under **Organisation** in the dashboard sidebar. It shows every department in your server, with its type, member count, rank count and division count, plus the **Total Members** across them and the **Slots Remaining** before your department limit. Search departments by name or filter them by type.
+
+Server admins see every department. Department owners who aren't server admins only see the departments they own.
+
+---
+
+## Creating a Department
+
+Select **New Department** to open the setup wizard.
+
+<Steps>
+  <Step title="Choose a department type">
+    Pick the type that fits best. **You can't change the type later.**
+  </Step>
+  <Step title="Details">
+    Enter a **Department Name**, up to 60 characters, and an optional description of what the department does, up to 300 characters. Optionally choose a **Department Role** and a **Log Channel**. See [Discord Roles and Logs](#discord-roles-and-logs).
+  </Step>
+  <Step title="Review & create">
+    Check your choices and select **Create Department**.
+  </Step>
+</Steps>
+
+You become the department's owner, and are given the Department Role if one is set. A private join code is created automatically.
+
+### Department Types
+
+| Type | For |
+| --- | --- |
+| **Police** | Law enforcement units, patrols and SEK. |
+| **Firefighter** | Fire and rescue crews. |
+| **Medic** | Ambulance and medical response teams. |
+| **HARS** | Roadside assistance and recovery services. |
+| **Taxi / Bus Company** | Taxi and bus company operations. |
+| **Trucker** | Freight and haulage companies. |
+| **Government** | Divisions and government positions. |
+
+Government departments unlock **divisions**, **government positions** and **log channels for each kind of activity**. Other types use a single roster and one log channel.
+
+### Limits
+
+| Limit | Departments | Government departments |
+| --- | --- | --- |
+| Departments per server | 3 | 3 |
+| Ranks per department | 15 | 30 |
+| Divisions per department | 0 | 4 |
+| Ranks per division | 0 | 15 |
+| Positions per department | 0 | 6 |
+
+If your server needs more, ask in our [Discord community](https://discord.gg/tTyTTW3Dta).
+
+---
+
+## Managing a Department
+
+Open a department from the **Departments** page to manage it. Server admins and the department's owner can do this. The page has three tabs.
+
+### Overview
+
+**Invite members** <br />The department's join link. Select **Copy Link** to share it. Anyone with the link can join, so only share it with people who should be in the department. Select **Regenerate** to create a new link; the old one stops working immediately.
+
+**Rank sync** <br />When the department was last synced, and **Sync Now** to sync it straight away. See [Rank Sync](#rank-sync).
+
+**Open Member Portal** <br />Opens the department's [member portal](#the-member-portal).
+
+### Settings
+
+**Department Name** and **Description** <br />Change the department's name and description.
+
+**Department Role** <br />The Discord role members are given when they join. See [Discord Roles and Logs](#discord-roles-and-logs).
+
+**Logging** <br />The channel department activity is logged to. Government departments can choose a channel for each kind of activity.
+
+**Icon** <br />Upload a square PNG, JPG, WEBP or GIF up to 2 MB. It is shown in the portal, on the dashboard and on join links. Without one, the department type's icon is used. Use **Replace** or **Remove** to change it.
+
+Changes are saved with the save bar at the bottom of the page.
+
+### Structure
+
+**Ranks** <br />Lists the department's ranks. Ranks are created and edited in the [member portal](#ranks).
+
+**Divisions** <br />Government departments only. Select **New Division** to split the department into smaller units, each with its own ranks. Give each one a **Division Name**, up to 60 characters, an optional description, and optionally a **Division Role** and log channel. Select **Manage Division Ranks** to set up its ranks in the member portal. Deleting a division removes its ranks, takes its Division Role away from its members, and moves them back to the main roster.
+
+**Government positions** <br />Government departments only. Lists the department's positions, which are managed in the [member portal](#positions).
+
+### Danger Zone
+
+These actions need a server admin.
+
+**Transfer Ownership** <br />Makes another department member the owner.
+
+**Delete Department** <br />Permanently deletes the department, its ranks, divisions, positions, roster, join code and shout history.
+
+<Danger>
+  **Warning**
+
+  Deleting a department cannot be undone.
+</Danger>
+
+Creating, deleting and transferring departments, regenerating join links, and changes to divisions are recorded on the [Audit Logs](/pages/dashboard/audit-logs) page.
+
+---
+
+## Joining a Department
+
+To join, open the department's join link, sign in with Discord, and select **Join Department**. You are given the Department Role, if one is set, and can then open the department's member portal.
+
+Only department members, and the department's owner, can open its portal.
+
+---
+
+## The Member Portal
+
+The member portal is where members see department news and leaders run the department. What you can see and do depends on the permissions of your rank. The department's owner can do everything.
+
+### Home
+
+The department's home page shows its **shouts**, which are announcements to the whole department.
+
+Members with the **Post Shouts** permission can post a shout with an optional title, up to 80 characters, and a message, up to 2000 characters. With the **Ping Ranks** permission, they can also tag the ranks the shout is meant for.
+
+With the **Schedule Shouts** permission, select **Schedule** and pick a date and time, up to a year ahead, then **Schedule Shout**. The shout appears on the home page once that time arrives.
+
+Shout authors can delete their own shouts. Members with **Manage Shouts** can delete anyone's.
+
+Government departments also show the **Cabinet**: every government position and who holds it, or **Vacant**.
+
+### Roster
+
+The roster lists the department's members grouped by rank. Members without a rank are listed as **Unranked**.
+
+**Move to rank** <br />Drag a member to another rank, or use **Move to rank**. Requires **Move Members**.
+
+**Move to division** <br />Government departments only. Moves a member between divisions and the **Main Roster**. Requires **Move Members**.
+
+**Remove from department** <br />Removes a member and takes away their Department Role and Division Role. The owner can't be removed. Requires **Remove Members**.
+
+**Join Code** <br />The department's join code and link. Requires **View Join Code**.
+
+### Ranks
+
+Members with **Manage Ranks** can create, edit, delete and reorder the department's ranks. Drag ranks to reorder the hierarchy, or focus a rank and use the arrow keys.
+
+**Rank Name** <br />Up to 40 characters.
+
+**Colour** <br />The colour the rank is shown in.
+
+**Discord Role** and **Roblox Group** <br />Optional links used by [Rank Sync](#rank-sync). For a Roblox group, enter both the **Roblox Group ID** and the **Roblox Group Rank Number** (1 to 255).
+
+**Permissions** <br />What members with this rank can do in the portal. See [Rank Permissions](#rank-permissions).
+
+Deleting a rank leaves its members **Unranked**.
+
+### Divisions
+
+Government departments only. Members with **Manage Divisions** can manage each division's ranks, the same way as the department's ranks. Members of one division can't manage another division's ranks.
+
+Divisions are created on the dashboard.
+
+### Positions
+
+Government departments only. Positions are unique offices, such as a Governor or a Head of Department. Only one member can hold each position at a time.
+
+Members with **Manage Positions** can create, edit and delete positions, each with a title up to 40 characters, a description up to 200 characters and a colour. Select **Held by** to choose which department member holds the position. A member who leaves the department stops holding their positions.
+
+---
+
+## Rank Permissions
+
+| Permission | Allows members to |
+| --- | --- |
+| **Move Members** | Move members between ranks and divisions on the roster. |
+| **Remove Members** | Remove members from the department. |
+| **View Join Code** | View the department's join code. |
+| **Post Shouts** | Post announcements to the department. |
+| **Ping Ranks** | Tag specific ranks when posting a shout. |
+| **Schedule Shouts** | Schedule a shout to post at a later date and time. |
+| **Manage Shouts** | Delete shouts posted by other members. |
+| **Manage Ranks** | Create, edit, delete and reorder ranks, including their Discord role and Roblox group links. |
+| **Manage Divisions** | Manage a division's ranks and permissions. Government departments only. |
+| **Manage Positions** | Create, edit, delete and assign government positions. Government departments only. |
+
+---
+
+## Rank Sync
+
+Rank sync gives members a rank automatically. A member is given a rank when they hold its linked **Discord Role**, or when they hold its linked rank in a **Roblox Group**. If a member matches more than one rank, they get the highest one. Members in a division are matched against that division's ranks.
+
+Roblox group links only work for members who have linked their Roblox account on Elbify.
+
+Members whose rank was set automatically are marked **Synced** on the roster. **If someone moves a member to a rank by hand, rank sync no longer changes that member's rank.**
+
+The department syncs in the background when members open the portal. To sync straight away, select **Sync Now** on the dashboard, or **Sync Ranks** in the portal, which requires **Manage Ranks** or **Manage Divisions**.
+
+---
+
+## Discord Roles and Logs
+
+### Department and Division Roles
+
+**Department Role** <br />Given to members when they join the department, and taken away when they are removed.
+
+**Division Role** <br />Government departments only. Given to members when they are moved into the division, and taken away when they are moved out of it, removed from the department, or the division is deleted.
+
+Roles are only given or taken away when one of these happens. Setting or changing a role later doesn't update existing members. Elbify's role must be above these roles in your server settings.
+
+### Log Channels
+
+When a log channel is set, Elbify posts department activity to it:
+
+| Activity | Logged when |
+| --- | --- |
+| **Roster** | A member joins, is moved to another rank or division, or is removed, and when rank sync updates members' ranks. |
+| **Ranks** | A rank is created, updated, deleted, or the ranks are reordered. |
+| **Shouts** | A shout is posted, a scheduled shout is published, or a shout is deleted. |
+| **General** | Department ownership is transferred. |
+
+Other department types send everything to their **Log Channel**. Government departments can choose a channel for **Roster Changes**, **Rank Changes** and **Shouts**; any left empty use the **General** channel. Activity in a division that has its own log channel is posted there instead.
