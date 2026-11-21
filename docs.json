@@ -22,6 +22,12 @@
         ]
       },
       {
+        "group": "Updates",
+        "pages": [
+          "updates/new-website"
+        ]
+      },
+      {
         "group": "Plugins",
         "pages": [
           "pages/plugins/moderation",

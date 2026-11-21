@@ -1,4 +1,190 @@
 ---
 title: "Admin Panel"
-description: "This page covers the Admin Panel which can be accessed by server staff."
+description: "This page covers the Admin Panel - the page your staff use during a session to clock in, log moderations, answer admin callouts and follow tasks."
 ---
+
+The **Admin Panel** is where your staff team works during a session. From one page, staff can start and end their shift, log moderations, answer admin callouts from players, resolve their assigned task and see who else is on shift. Server managers configure Elbify on the dashboard; the Admin Panel is what staff use day to day.
+
+<Info>
+  The Admin Panel requires a **Mod Role**, an **Admin Role** or at least one **Permission Role** to be set on the **Permissions** page of the dashboard. Until then, the panel shows a setup guide to server admins and asks everyone else to contact a server manager.
+</Info>
+
+## Opening the Admin Panel
+
+Sign in on the Elbify website and open **Dashboard**. Each server you can access has an **Admin Panel** button next to its **Dashboard** button. You can also open it from the server's dashboard sidebar.
+
+You can open the Admin Panel for a server if any of these apply to you:
+
+- You own the server.
+- You have the server's **Admin Role**, **Mod Role** or one of its **Permission Roles**.
+- You have the **Administrator** or **Moderate Members** permission in Discord.
+
+The badge in the top corner shows whether you are signed in as **Admin** or **Mod**. Admins can use every part of the panel. What a Mod can see and do depends on the permissions given to their roles on the **Permissions** page.
+
+### Setting Up the Panel
+
+If no staff roles are configured yet, server admins see a **Set up the Admin Panel** guide instead of the panel:
+
+<Steps>
+  <Step title="Open Permissions">
+    Select **Go to Permissions** to open the **Permissions** page of the dashboard.
+  </Step>
+  <Step title="Choose a Mod Role">
+    Pick the Discord role your staff team has. Members with this role can open the Admin Panel.
+  </Step>
+  <Step title="Save your changes">
+    Save the **Permissions** page.
+  </Step>
+  <Step title="Come back to the Admin Panel">
+    Reopen the Admin Panel. It now loads for your staff.
+  </Step>
+</Steps>
+
+To control what Mod Role members can do on the panel, add **Permission Roles** with the permissions each role should have. See the [Permissions](/pages/dashboard/permissions) page for more information.
+
+---
+
+## Stats and Tabs
+
+The top of the panel shows live counts for your server. Selecting one opens its tab.
+
+**Open Callouts** <br />Admin callouts waiting for a response. Highlighted when there are any.
+
+**On Shift Now** <br />Staff currently on shift or on break.
+
+**Active Tasks** <br />Tasks currently assigned to staff.
+
+**Logged Moderations** <br />The total number of moderations logged in your server.
+
+The tabs you see depend on your permissions and on which plugins are enabled for the server. Each tab shows a count next to its name.
+
+| Tab | Shows | Requires |
+| --- | --- | --- |
+| **Overview** | Your shift, your task and quick actions | Everyone |
+| **Callouts** | Open admin callouts | **Admin Callouts** plugin and **Moderation Usage** |
+| **Moderation** | The moderation form and log | **Moderation Usage** or **Manage Moderations** |
+| **Shifts** | Staff currently on shift | **Shift Usage** |
+| **Tasks** | Active task assignments | **Tasks** plugin and **Task Management** |
+| **Tracking** | Recent actions taken on the panel | **Audit Logs** |
+
+When a plugin a section needs is turned off, the section explains this instead of loading. Staff with the **Manage Plugins** permission get an **Enable** button that takes them straight to the plugin on the dashboard; everyone else is asked to contact a server admin.
+
+---
+
+## Overview
+
+The **Overview** tab is the page staff see first.
+
+### Your Shift
+
+Shows whether you are **Not on shift**, **On shift** or **On break**, and how long your current shift has been running. Requires the **Shifts** plugin and the **Shift Usage** permission.
+
+**Start Shift** <br />Clocks you in.
+
+**Start Break** / **End Break** <br />Puts your shift on break and resumes it.
+
+**End Shift** <br />Clocks you out.
+
+Shifts started on the Admin Panel are the same shifts as the `/shift` command, so you can start a shift on the website and end it in Discord. See the [Shifts](/pages/plugins/shifts) page for more information.
+
+**Weekly Leaderboard** opens this week's shift leaderboard.
+
+### My Task
+
+Shows the task you are currently assigned, and when it was assigned. Select **Resolve Task** once you have completed it. Requires the **Tasks** and **Shifts** plugins and the **Shift Usage** permission.
+
+While you are on break, your task is **Paused** and can't be resolved until you end your break. See the [Tasks](/pages/plugins/tasks) page for more information.
+
+### Quick Actions
+
+Shortcuts to the other tabs: **Log a Moderation**, **Review Callouts**, **View Team on Shift**, **View Task Board** and **View Activity Log**. You only see the actions you have access to.
+
+---
+
+## Callouts
+
+The **Callouts** tab lists open admin callouts from players in your server, with who made the call, their location and their reason. See the [Admin Callouts](/pages/plugins/admin-callouts) page for how players make a callout.
+
+**Resolve** <br />Closes the callout. You can add an optional **message to the caller**, up to 200 characters.
+
+**Dismiss** <br />Closes the callout without acting on it. A **reason shown to the caller** is required, up to 200 characters.
+
+The caller receives your message or reason in a direct message if their DMs are open. Both actions also have an optional **Staff note**, up to 500 characters, which is only visible to staff.
+
+Use **Refresh** to load new callouts.
+
+---
+
+## Moderation
+
+The **Moderation** tab lets staff log moderations against Roblox players and browse your server's moderation history. Requires the **Moderation** plugin. See the [Moderation](/pages/plugins/moderation) page for more information.
+
+### Logging a Moderation
+
+Staff with the **Moderation Usage** permission see the **Log a Moderation** form.
+
+**Roblox Player** <br />Type at least 3 characters of a Roblox username and pick the player from the results.
+
+**Type** <br />One of your server's moderation types, such as a warning, kick or ban. Moderation types are set in the Moderation settings on the dashboard.
+
+**Reason** <br />Why the moderation was given, up to 500 characters. Required.
+
+**Staff note** <br />Extra context for your team, up to 500 characters. Only visible to staff and never sent to the player.
+
+Select **Log Moderation** to save it. Each moderation gets a case number, such as `#42`.
+
+### Recent Moderations
+
+The moderation log lists every moderation in your server, newest first, 25 per page. Filter it by **Roblox username**, **Moderator** or **Case** number, then select **Search**. Select **Reset** to clear the filters.
+
+Open a case to see its player, type, reason, staff note, moderator and the time it was logged. Edited cases show who last edited them and when.
+
+**Editing and deleting moderations**
+
+| Permission | Can view | Can edit or delete |
+| --- | --- | --- |
+| **Moderation Usage** | Every moderation | Moderations they logged |
+| **Manage Moderations** | Every moderation | Every moderation |
+
+If a moderation's type is no longer one of your moderation types, you can keep it when editing or change it to a current one.
+
+<Warning>
+  **Important**
+
+  Deleting a moderation is permanent. Edits and deletions are recorded in your server's audit logs and posted to your moderation log channel.
+</Warning>
+
+---
+
+## Shifts
+
+The **Shifts** tab lists the staff currently **On shift** or **On break**, and how long each has been on shift. Requires the **Shifts** plugin and the **Shift Usage** permission.
+
+### Weekly Leaderboard
+
+Open the leaderboard from **Weekly Leaderboard** on the **Overview** tab. It shows:
+
+**Weekly Requirement** <br />The hours staff need this week and, if set, the longest break allowed. Admins can select **Edit Requirements** to change these on the **Shift Settings** page.
+
+**Leaderboard** <br />Every staff member who has logged time this week, ranked by hours logged, with their progress towards the requirement. Staff who are behind are highlighted. Staff with accepted leave covering this week are marked **On Leave**.
+
+---
+
+## Tasks
+
+The **Tasks** tab lists every active task assignment in your server: who it is assigned to, the task, and when it was assigned. Paused tasks are marked **Paused**. Requires the **Tasks** plugin and the **Task Management** permission.
+
+---
+
+## Tracking
+
+The **Tracking** tab shows the 50 most recent actions taken on the Admin Panel, with who took them and when. Requires the **Audit Logs** permission.
+
+Tracked actions are:
+
+- Starting a shift, starting and ending a break, and ending a shift (with its length)
+- Resolving a task
+- Logging a moderation
+- Resolving or dismissing an admin callout
+
+These actions also appear under the **Admin Panel** category on the [Audit Logs](/pages/dashboard/audit-logs) page of the dashboard.

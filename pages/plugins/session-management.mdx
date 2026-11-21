@@ -57,6 +57,8 @@ Members press **Vote** to vote and press it again to take their vote back. When 
 
 You can also follow the votes on the dashboard. The **Session Poll Votes** card at the top of the **Session Management** page shows each open poll with its vote count, who voted and when voting ends, and updates every 15 seconds. When no poll is open, it shows the most recent one.
 
+When a poll ends, the member who posted it gets a direct message with the final vote count, unless this is turned off on the dashboard.
+
 ## Configuring the Plugin
 
 The session settings are found on the **Session Management** page of the dashboard.
@@ -92,3 +94,13 @@ To set the same channel or ping role on all three announcement types at once, us
 The **Session Poll** section sets how `/session poll` looks. It has the same title, description, colour, image and role ping settings as the announcements, but no channel, because the channel is chosen when the command is run. A preview of the poll is shown while you edit it.
 
 **Default Poll Length** <br />How long a poll stays open when `/session poll` is run without `duration:`. Enter hours and minutes, from 1 minute to 24 hours. The default is 30 minutes.
+
+### Logs
+
+Keep a record of every session and session poll in a staff channel.
+
+**Session Logs** <br />The channel to log to when a session starts up, hits low player count, is transferred or shuts down. Transfers show who ran the command, the previous host and the new host or co-host.
+
+**Session Poll Logs** <br />The channel to log to when a session poll is posted and when it ends, with the final vote count.
+
+**DM the poll's creator when it ends** <br />Sends the member who posted the poll a direct message with the final vote count. On by default.
