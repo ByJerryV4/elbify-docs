@@ -19,6 +19,10 @@ Staff with the **Session Management** permission can announce a session with the
 
 **ssd** <br />Announces that the session has ended.
 
+**transfer** <br />Hands the session to another member, adds a co-host or removes a co-host.
+
+**poll** <br />Posts a poll asking members whether they would join a session.
+
 ---
 
 The announcement is sent to the channel set for that type on the dashboard, showing who the host is, the time, and the join code if one is set. If a join link is set, a **Join Session** button is added.
@@ -28,6 +32,30 @@ The announcement is sent to the channel set for that type on the dashboard, show
 <Info>
   If no channel has been set for an announcement type, the command will tell you to set one in the dashboard.
 </Info>
+
+`/session ssu` starts a new session and ends any earlier one that is still running. `/session ssd` ends it.
+
+## Transferring a Session
+
+Use `/session transfer user:<member> mode:<mode>` to change who runs the current session. Only the current host or a server admin can use it.
+
+**host** <br />Makes the member the new host.
+
+**cohost** <br />Adds the member as a co-host.
+
+**remove_cohost** <br />Removes the member as a co-host.
+
+The new host or co-host must have the **Session Management** permission. The original session start announcement is edited to show the new host and a **Co-hosts** line.
+
+## Session Polls
+
+Use `/session poll` to ask members whether they would join a session. The poll is posted in the channel you run the command in, or in the channel you give with the `channel:` option.
+
+Members press **Vote** to vote and press it again to take their vote back. When the poll ends, the **Vote** button is turned off. Staff with the **Session Management** permission can press **Voters** to see who voted.
+
+**duration** <br />Optional. How long the poll stays open, from 1 minute to 24 hours. Use `30m`, `2h`, `1h30m` or a plain number of minutes such as `45`. If you leave it out, the default poll length from the dashboard is used.
+
+You can also follow the votes on the dashboard. The **Session Poll Votes** card at the top of the **Session Management** page shows each open poll with its vote count, who voted and when voting ends, and updates every 15 seconds. When no poll is open, it shows the most recent one.
 
 ## Configuring the Plugin
 
@@ -58,3 +86,9 @@ The session settings are found on the **Session Management** page of the dashboa
 ![The Session Start announcement editor next to its live Discord preview](/images/sessionpanelexample.png)
 
 To set the same channel or ping role on all three announcement types at once, use the **Apply To All** options at the top of the page.
+
+### Session Poll
+
+The **Session Poll** section sets how `/session poll` looks. It has the same title, description, colour, image and role ping settings as the announcements, but no channel, because the channel is chosen when the command is run. A preview of the poll is shown while you edit it.
+
+**Default Poll Length** <br />How long a poll stays open when `/session poll` is run without `duration:`. Enter hours and minutes, from 1 minute to 24 hours. The default is 30 minutes.
