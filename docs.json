@@ -24,7 +24,7 @@
       {
         "group": "Updates",
         "pages": [
-          "updates/new-website"
+          "updates/release"
         ]
       },
       {
@@ -96,5 +96,12 @@
   "contextual": {
     "options": [],
     "display": "header"
-  }
+  },
+  "redirects": [
+    {
+      "source": "/updates/new-website",
+      "destination": "/updates/release",
+      "permanent": true
+    }
+  ]
 }
