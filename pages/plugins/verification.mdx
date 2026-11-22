@@ -17,13 +17,25 @@ Once verified, a member is given the Verified role and their nickname is updated
 
 {/* IMAGE: /images/verifypanelexample.png - screenshot of the verification panel with the Verify button */}
 
+## Finding Players with /whois
+
+The Roblox account a member links to Elbify also powers `/whois`, which works whether or not this plugin is on.
+
+**/whois roblox** <br />Takes a Roblox username or ID and shows whether that player is in this Discord server, with their Roblox username, Roblox ID and linked Discord account.
+
+**/whois discord** <br />Shows the Roblox account linked to a Discord member.
+
+A player who has linked once can be found in every server that uses Elbify, so staff don't need to ask players in-game whether they're in the Discord. That makes it a good reason to point players to verification. Linked accounts are only shown when the person is in that Discord server.
+
+Using `/whois` needs the **Use /whois** permission on the [**Permissions**](/pages/dashboard/permissions) page.
+
 ## Managing Verification
 
 These commands require the **Server Management** permission.
 
 **/verify member:** <br />Verifies someone else who has linked their Roblox account. This is the same `/verify` command with the `member` option filled in.
 
-**/verification panel** <br />Posts the verification panel in the current channel.
+**/verification panel** <br />Posts the verification panel in the current channel. Attach an image with the `image` option to show it on this panel instead of the dashboard's panel image. It must be a PNG, JPG, GIF or WEBP file of 8MB or less, and Elbify needs the **Attach Files** permission in the channel.
 
 **/verification remove** <br />Removes a member's verification.
 
@@ -42,6 +54,8 @@ The verification settings are found on the **Verification Settings** page of the
 **Unverified Role** <br />Optional. Given to new members when they join and removed when they verify.
 
 **Verification Logs Channel** <br />Optional. Verifications, removed verifications and Roblox account changes are logged here. Leave it blank to disable logging.
+
+**Panel Image** <br />Optional. An image shown on verification panels posted with `/verification panel`. Upload a PNG, JPG, GIF or WEBP file of up to 4MB. It is saved as soon as you upload or remove it. Panels that are already posted keep their old image, so post a new panel to show the change.
 
 **Nickname Template** <br />Sets members' nicknames when they verify. You can use `{roblox_username}`, `{roblox_displayname}`, `{roblox_id}` and `{discord_username}`. Leave it blank to keep nicknames unchanged.
 
